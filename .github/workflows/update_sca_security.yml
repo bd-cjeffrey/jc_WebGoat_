@@ -5,6 +5,8 @@ on:
   pull_request:
     branches: [main, master, develop, stage, release]
   workflow_dispatch:
+
+  permissions: contents: write pull-requests: write
   
   
 jobs:
@@ -40,7 +42,7 @@ jobs:
 
         ### FIX PULL REQUEST CREATION: Uncomment below to enable
         blackducksca_fixpr_enabled: true
-        github_token: ${{ secrets.MY_GITHUB_TOKEN }} # Required when Fix PRs is enabled
+        github_token: ${{ secrets.GITHUB_TOKEN }} # Required when Fix PRs is enabled
 
         ### PULL REQUEST COMMENTS: Uncomment below to enable
         blackducksca_prcomment_enabled: true 
