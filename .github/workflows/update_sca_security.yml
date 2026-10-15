@@ -1,7 +1,4 @@
 name: CI-BlackDuck-SCA-Basic
-permissions: 
-  contents: write 
-  pull-requests: write
 on:
   push:
     branches: [main, master, develop, stage, release]
